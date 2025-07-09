@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Masker</title>
+</head>
+<body>
+  <h2>Mask a URL</h2>
+  <form method="POST">
+    Real URL: <input type="text" name="real_url" required><br><br>
+    Masked Alias: <input type="text" name="alias" required><br><br>
+    <input type="submit" value="Generate Masked URL">
+  </form>
+
+  {% if masked_link %}
+    <h3>Masked URL:</h3>
+    <p><a href="{{ masked_link }}" target="_blank">{{ masked_link }}</a></p>
+  {% endif %}
+</body>
+</html>
